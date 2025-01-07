@@ -1,0 +1,133 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow: hidden;
+  padding-bottom: 100rpx;
+}
+
+.container {
+  padding: 16rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 92%;
+  max-width: 700rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  margin: 0 auto;
+  padding-top: 12rpx;
+}
+
+.input-section {
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.input-box {
+  width: 100%;
+  height: 200rpx;
+  padding: 24rpx;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  line-height: 1.6;
+  border: none;
+}
+
+.preset-section {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 24rpx;
+  font-weight: normal;
+}
+
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16rpx;
+}
+
+.preset-item {
+  background: #f7f7f7;
+  padding: 20rpx 16rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.preset-item.selected {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.generate-btn {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #ff4d4f;
+  color: #fff;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  margin-top: 32rpx;
+  font-weight: normal;
+  transition: opacity 0.3s;
+}
+
+.generate-btn:active {
+  opacity: 0.9;
+}
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  height: 100%;
+  line-height: 100rpx;
+  transition: all 0.3s;
+}
+
+.tab-item.active {
+  color: #ff4d4f;
+  font-weight: 500;
+}

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<navigation-bar title="AI红包封面生成器" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+
+<image class="banner-image" src="/assets/images/2025-header.jpeg" mode="widthFix"></image>
+
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="content">
+      <view class="input-section">
+        <textarea class="input-box" 
+          placeholder="请描述你想要的红包封面" 
+          value="{{inputText}}" 
+          bindinput="onInputChange"
+        />
+      </view>
+
+      <view class="preset-section">
+        <view class="section-title">热门主题</view>
+        <view class="preset-grid">
+          <view class="preset-item {{selectedPreset === item ? 'selected' : ''}}" 
+            wx:for="{{presets}}" 
+            wx:key="index" 
+            bindtap="onPresetSelect" 
+            data-preset="{{item}}">
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <button class="generate-btn" bindtap="onGenerate" loading="{{isGenerating}}">
+        生成封面
+      </button>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="tab-bar">
+  <view class="tab-item {{activeTab === 'generate' ? 'active' : ''}}" bindtap="switchTab" data-tab="generate">生成</view>
+  <view class="tab-item {{activeTab === 'history' ? 'active' : ''}}" bindtap="navigateToHistory">历史</view>
+</view>

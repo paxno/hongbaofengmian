@@ -1,0 +1,15 @@
+<!--pages/preview/preview.wxml-->
+<view class="container">
+  <view class="preview-section">
+    <image class="preview-image" src="{{imageUrl}}" mode="aspectFit" />
+    <view class="preview-info">
+      <text class="preview-prompt">{{description}}</text>
+      <text class="preview-time">生成时间：{{generateTime}}</text>
+    </view>
+  </view>
+
+  <view class="action-section">
+    <button class="action-btn save-btn" bindtap="onSave">保存封面</button>
+    <button class="action-btn regenerate-btn" bindtap="onRegenerate">重新生成</button>
+  </view>
+</view>

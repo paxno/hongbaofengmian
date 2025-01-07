@@ -1,0 +1,93 @@
+/* pages/history/history.wxss */
+.container {
+  padding: 30rpx;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.history-item {
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.history-image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.history-info {
+  padding: 20rpx;
+}
+
+.history-prompt {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.history-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.empty-state {
+  flex: 1;
+  min-height: calc(100vh - 60rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32rpx;
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 32rpx;
+  color: #999;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.empty-tip {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.empty-state-text {
+  margin-top: 16rpx;
+}
+
+.clear-button {
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.clear-button button {
+  background: #ff4444;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+}

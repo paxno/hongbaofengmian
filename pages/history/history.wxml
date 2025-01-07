@@ -1,0 +1,22 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+  <view class="history-list">
+    <view class="history-item" wx:for="{{historyList}}" wx:key="id" bindtap="onItemTap" data-item="{{item}}">
+      <image class="history-image" src="{{item.imageUrl}}" mode="aspectFill" />
+      <view class="history-info">
+        <text class="history-prompt">{{item.description}}</text>
+        <text class="history-time">{{item.generateTime}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-state" wx:if="{{!historyList.length}}">
+    <icon type="info" size="80" color="#CCCCCC"></icon>
+    <text class="empty-text">暂无生成记录</text>
+    <text class="empty-tip">点击"生成"开始创建红包封面</text>
+  </view>
+
+  <view class="clear-button" wx:if="{{historyList.length}}">
+    <button bindtap="onClearHistory">清空历史记录</button>
+  </view>
+</view>
